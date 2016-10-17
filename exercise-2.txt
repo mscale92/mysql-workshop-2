@@ -1,0 +1,28 @@
+//Insert one row into decodemtl_addressbook.Account
+
+mysql> insert into Account () values ();
+
+Query OK, 1 row affected, 3 warnings (0.00 sec)
+
+    //If both the column list and the VALUES list are empty, 
+    //INSERT creates a row with each column set to its default value
+    
+    
+//Insert one row into decodemtl_addressbook.AddressBook
+
+mysql> insert into AddressBook () values ();
+
+
+mysql> insert into Entry
+    -> (firstName, lastName, birthday)
+    -> values ('Mary', 'Scale', '1992-05-02'),
+    -> ('Blaise', 'Adams', '1989-06-29'),
+    -> ('Rogue', 'Scale', '2014-05-09');
+    
+    //INSERT statements that use VALUES syntax can insert multiple rows. 
+    //To do this, include multiple lists of column values, 
+    //each enclosed within parentheses and separated by commas. 
+    
+    
+
+
