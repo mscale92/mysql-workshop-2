@@ -1,0 +1,5 @@
+//Delete all the rows in Entry without using the Delete statement
+
+truncate Entry;
+
+    //truncate very quickly deletes all of the rows in a table

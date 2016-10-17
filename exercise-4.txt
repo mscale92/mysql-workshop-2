@@ -1,0 +1,17 @@
+//Modify, aka Update, the recently created rows
+
+update Entry  set lastname = 'Adams' order by id desc limit 3;
+Query OK, 2 rows affected (0.00 sec)
+Rows matched: 3  Changed: 2  Warnings: 0
+
+mysql> select firstname, lastname from Entry order by id desc limit 3;
++-----------+----------+
+| firstname | lastname |
++-----------+----------+
+| Rogue     | Adams    |
+| Blaise    | Adams    |
+| Mary      | Adams    |
++-----------+----------+
+3 rows in set (0.00 sec)
+
+    //Now all the rows have the same lastname

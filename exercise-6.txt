@@ -1,0 +1,7 @@
+//Delete all of the data from Account using delete
+
+delete from Account;
+Query OK, 1 row affected (0.00 sec)
+
+    //one difference between delete and truncate is that delete
+    //returns the number of rows deleted
