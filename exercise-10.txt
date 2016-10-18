@@ -22,7 +22,15 @@ mysql> select count(addressBookId) from Entry where birthday >= '1965-01-01';
 +----------------------+
 1 row in set (0.01 sec)
 
+mysql> select count(id) from Entry where birthday >= '1965-01-01';                                                               
++-----------+
+| count(id) |
++-----------+
+|      2597 |
++-----------+
+
         //use greater than or equal to find the dates after or on
+            //id since that is the primary key in the table!!
         
         
 //Which Address Book Entry is listed as being the oldest of age?
