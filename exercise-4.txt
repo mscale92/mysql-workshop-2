@@ -15,3 +15,30 @@ mysql> select firstname, lastname from Entry order by id desc limit 3;
 3 rows in set (0.00 sec)
 
     //Now all the rows have the same lastname
+
+//To make each case different, use CASE
+
+Example:
+        UPDATE tbl_accounts
+        SET nation_id =
+             CASE id_account
+             WHEN 3 THEN 3331
+             WHEN 5 THEN 5551
+             ELSE nation_id
+             END,
+        group_id =
+             CASE id_account
+             WHEN 3 THEN 3332
+             WHEN 5 THEN 5552
+             ELSE group_id
+             END
+
+
+update Entry set lastname =
+CASE name
+when name = 'Mary' then 'Addams'
+when name = 'Rogue' then 'Cat-Scale'
+else then 'the Adams'
+order by id desc limit 3;
+
+    //this changes the lastname entry based on the value for the firstname

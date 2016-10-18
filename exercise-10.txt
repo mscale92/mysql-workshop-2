@@ -1,0 +1,51 @@
+//How many Address Book Entries are listed as born before February 12th of 1982?
+
+mysql> select count(addressBookId) from Entry where birthday < '1982-02-12';
++----------------------+
+| count(addressBookId) |
++----------------------+
+|                 5374 |
++----------------------+
+1 row in set (0.01 sec)
+
+    //the comparison must be birthday less than since it needs to come before the
+    //given date, birthdays before a period of time are less
+    
+
+//How many Address Book Entries are listed as born on or after January 1st of 1965?
+
+mysql> select count(addressBookId) from Entry where birthday >= '1965-01-01';                                                                            
++----------------------+
+| count(addressBookId) |
++----------------------+
+|                 5194 |
++----------------------+
+1 row in set (0.01 sec)
+
+        //use greater than or equal to find the dates after or on
+        
+        
+//Which Address Book Entry is listed as being the oldest of age?
+
+mysql> select birthday from Entry order by birthday asc limit 1;                                                                 
++---------------------+
+| birthday            |
++---------------------+
+| 1945-09-02 09:21:58 |
++---------------------+
+1 row in set (0.00 sec)
+
+        //find the oldest birthday! now do something similar to find the name
+        //with one query
+        
+mysql> select firstname, lastname, birthday from Entry order by birthday asc limit 1;                                            
++-----------+----------+---------------------+
+| firstname | lastname | birthday            |
++-----------+----------+---------------------+
+| Abigail   | Rollins  | 1945-09-02 09:21:58 |
++-----------+----------+---------------------+
+1 row in set (0.00 sec)
+
+    //boom
+        
+

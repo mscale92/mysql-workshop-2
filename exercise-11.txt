@@ -1,0 +1,38 @@
+//How many Address Book Entries are not listed as other?
+
+mysql> select count(addressBookId) from Entry where type != 'other';
++----------------------+
+| count(addressBookId) |
++----------------------+
+|                 5600 |
++----------------------+
+1 row in set (0.00 sec)
+
+        //use ! not to find all types that are not listed as other
+
+
+
+//How many Address Book Entries are listed as either home or work?
+mysql> select count(addressBookId)
+    -> from Entry
+    -> where type = 'home' OR 'work';
++----------------------+
+| count(addressBookId) |
++----------------------+
+|                 3200 |
++----------------------+
+1 row in set, 1 warning (0.01 sec)
+
+    //use Or to compare two the two enum values within type
+        
+
+
+mysql> select count(addressBookId) from Entry where subtype = 'phone';                                                     
++----------------------+
+| count(addressBookId) |
++----------------------+
+|                 1200 |
++----------------------+
+1 row in set (0.01 sec)
+
+    //just use regular = to equal the comparison
